@@ -123,3 +123,9 @@ $ kubectl duck get addressable
   default    Service/even        True           60d
   default    Service/odd         True           60d
  ```
+
+## TODO:
+
+- [] Add support for dynamic ducktype lookup.
+- [] Add support for known ducktypes local file.
+ 
