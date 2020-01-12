@@ -8,6 +8,15 @@ _Work in progress._
 
 ## Installation
 
+Use [krew](https://sigs.k8s.io/krew) plugin manager to install,
+
+```shell script
+kubectl krew install duck
+kubectl duck --help
+```
+
+Or manually,
+
 `kubectl-duck` can be installed via:
 
 ```shell
@@ -129,3 +138,10 @@ $ kubectl duck get addressable
 - [] Add support for dynamic ducktype lookup.
 - [] Add support for known ducktypes local file.
  
+## Authors
+ 
+Scott Nichols [@n3wscott](https://twitter.com/n3wscott).
+ 
+## License
+ 
+Apache 2.0. See [LICENSE](./LICENSE).
