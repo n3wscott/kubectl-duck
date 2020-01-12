@@ -31,10 +31,10 @@ func addGet(topLevel *cobra.Command, ns string, c *client.Client) {
 	cmd := &cobra.Command{
 		Use:       "get",
 		ValidArgs: []string{},
-		Short:     "Get the resources related to a ducktype.",
+		Short:     "Get the resource instances related to a ducktype.",
 		Example: `
-    To list the known ducktypes and how they map to installed resources:
-  $ kubectl duck get
+  To get resource instances that are of the given ducktype:
+  $ kubectl duck get [ducktype]
 `,
 		Args: func(cmd *cobra.Command, args []string) error {
 			if len(args) >= 1 {
