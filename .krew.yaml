@@ -5,9 +5,10 @@ metadata:
 spec:
   version: {{ .TagName }}
   homepage: https://github.com/n3wscott/kubectl-duck
-  shortDescription: Ducktype support for kubectl.
+  shortDescription: List custom resources with ducktype support
   description: |
-    This plugin allows you to list and get custom resources based on ducktype labels on CRDs.
+    This plugin allows you to list and get custom resources based on ducktype
+    labels on CRDs.
   caveats: |
     * Ducktype labels are currenly hardcoded to known types from Knative.
   platforms:
@@ -16,9 +17,6 @@ spec:
         os: darwin
         arch: amd64
     {{addURIAndSha "https://github.com/n3wscott/kubectl-duck/releases/download/{{ .TagName }}/kubectl-duck_{{ .TagName }}_darwin_amd64.tar.gz" .TagName }}
-    files:
-    - from: "*"
-      to: "."
     bin: kubectl-duck
   - selector:
       matchLabels:
@@ -26,15 +24,10 @@ spec:
         arch: amd64
     {{addURIAndSha "https://github.com/n3wscott/kubectl-duck/releases/download/{{ .TagName }}/kubectl-duck_{{ .TagName }}_linux_amd64.tar.gz" .TagName }}
     files:
-    - from: "*"
-      to: "."
     bin: kubectl-duck
   - selector:
       matchLabels:
         os: windows
         arch: amd64
     {{addURIAndSha "https://github.com/n3wscott/kubectl-duck/releases/download/{{ .TagName }}/kubectl-duck_{{ .TagName }}_windows_amd64.tar.gz" .TagName }}
-    files:
-    - from: "*"
-      to: "."
     bin: kubectl-duck.exe
