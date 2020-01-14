@@ -197,6 +197,7 @@ var knownDucks = []string{
 	"messaging.knative.dev/subscribable=true",
 	"duck.knative.dev/addressable=true",
 	"duck.knative.dev/podspecable=true",
+	"duck.knative.dev/binding=true",
 }
 
 func KnownDucks() []string {
